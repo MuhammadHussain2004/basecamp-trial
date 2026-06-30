@@ -1,0 +1,127 @@
+/* ============================================
+   BASECAMP TRAIL - DESIGN SYSTEM
+   Exact values to copy into your real project's style.css
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-primary: #1d5c4a;       /* dark forest green - header/footer bg */
+  --color-primary-light: #2e7d63; /* lighter green - hover states */
+  --color-accent: #d9622b;        /* burnt orange - CTA buttons */
+  --color-accent-dark: #b94e1e;   /* orange hover */
+  --color-bg: #faf8f4;            /* warm off-white - page background */
+  --color-card: #ffffff;          /* white - card backgrounds */
+  --color-text-dark: #232323;     /* near-black - headings */
+  --color-text-body: #4a4a4a;     /* dark gray - body text */
+  --color-text-muted: #828282;    /* mid gray - captions, meta info */
+  --color-border: #e0ddd5;        /* light tan-gray border */
+  --color-border-strong: #c9c5ba; /* stronger border for inputs */
+  --color-badge-easy: #4caf6e;    /* green badge */
+  --color-badge-moderate: #d9a02b;/* amber badge */
+  --color-badge-hard: #d9622b;    /* orange/red badge */
+  --color-error: #c0392b;
+  --color-success: #2e7d63;
+  --color-highlight-row: #fdf3ea; /* light orange highlight for tables */
+
+  /* Typography */
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --fs-h1: 32px;
+  --fs-h2: 24px;
+  --fs-h3: 18px;
+  --fs-body: 15px;
+  --fs-small: 13px;
+  --fs-tiny: 11px;
+
+  /* Spacing scale (use these consistently) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+
+  /* Layout */
+  --max-width: 1100px;
+  --radius-card: 10px;
+  --radius-btn: 6px;
+  --radius-pill: 20px;
+  --radius-input: 6px;
+
+  /* Shadows (subtle only) */
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  background: var(--color-bg);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-text-dark); font-weight: 600; }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn-primary { background: var(--color-accent); color: #fff; }
+.btn-primary:hover { background: var(--color-accent-dark); transform: translateY(-1px); }
+.btn-secondary { background: transparent; border-color: var(--color-border-strong); color: var(--color-text-dark); }
+.btn-secondary:hover { background: var(--color-border); }
+.btn-small { padding: 8px 16px; font-size: var(--fs-small); }
+
+/* Card */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+
+/* Badge */
+.badge { display: inline-block; padding: 4px 12px; border-radius: var(--radius-pill); font-size: var(--fs-tiny); font-weight: 600; color: #fff; }
+.badge-easy { background: var(--color-badge-easy); }
+.badge-moderate { background: var(--color-badge-moderate); }
+.badge-hard { background: var(--color-badge-hard); }
+
+/* Form elements */
+label { display: block; font-size: var(--fs-small); font-weight: 600; color: var(--color-text-dark); margin-bottom: 6px; }
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-input);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text-dark);
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--color-primary-light); box-shadow: 0 0 0 3px rgba(46,125,99,0.15); }
+input.error { border-color: var(--color-error); }
+.error-text { color: var(--color-error); font-size: var(--fs-tiny); margin-top: 4px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--color-border); font-size: var(--fs-small); }
+th { font-weight: 600; color: var(--color-text-dark); }
+tr.highlight { background: var(--color-highlight-row); }

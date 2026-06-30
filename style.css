@@ -1,0 +1,7 @@
+.header{
+    display: flex;
+}
+body{
+    background:  #1d5c4a;
+    width: 100vh;
+}
