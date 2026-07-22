@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/GearRental.css" />
     <title>Gear Rental</title>
-</head>
-<body>
-      <!-- navbar -->
+  </head>
+  <body>
 
+    <!-- navbar -->
     <nav class="header">
-      <h2>BaseCamp Trial</h2>
+      <h2>BaseCamp Trail</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
@@ -19,75 +20,113 @@
       <button>Book now</button>
     </nav>
 
-          <h1>Rent your gear</h1>
-          <p>Qualit equipment, delivered or picked up at base camp</p>
+    <!-- page header -->
+    <div class="page-header">
+      <h1>Rent your gear</h1>
+      <p>Quality equipment, delivered or picked up at base camp</p>
+    </div>
 
+    <!-- gear cards -->
+    <div class="gear-grid">
 
-            <div>
-            <img src="" alt="tent photo">
-            <h4>2-person tent</h4>
-            <p>$15 / day</p>
-            <button>Add to trip</button>
+      <div class="gear-card">
+        <img src="https://picsum.photos/seed/basecamp-tent/400/300" alt="2-person tent" />
+        <div class="gear-info">
+          <h3>2-person tent</h3>
+          <span class="gear-price">$15 / day</span>
+          <button class="add-btn">Add to trip</button>
         </div>
+      </div>
 
-            <div>
-            <img src="" alt="backpack photo">
-            <h4>60L backpack</h4>
-            <p>$8 / day</p>
-            <button>Add to trip</button>
+      <div class="gear-card">
+        <img src="https://picsum.photos/seed/basecamp-backpack/400/300" alt="60L backpack" />
+        <div class="gear-info">
+          <h3>60L backpack</h3>
+          <span class="gear-price">$8 / day</span>
+          <button class="add-btn">Add to trip</button>
         </div>
+      </div>
 
-            <div>
-            <img src="" alt="boots photo">
-            <h4>Hiking boots</h4>
-            <p>$10 / day</p>
-            <button>Add to trip</button>
+      <div class="gear-card">
+        <img src="https://picsum.photos/seed/basecamp-boots/400/300" alt="Hiking boots" />
+        <div class="gear-info">
+          <h3>Hiking boots</h3>
+          <span class="gear-price">$10 / day</span>
+          <button class="add-btn">Add to trip</button>
         </div>
+      </div>
 
-            <div>
-            <img src="" alt="poles photo">
-            <h4>Trekking poles</h4>
-            <p>$5 / day</p>
-            <button>Add to trip</button>
+      <div class="gear-card">
+        <img src="https://picsum.photos/seed/basecamp-poles/400/300" alt="Trekking poles" />
+        <div class="gear-info">
+          <h3>Trekking poles</h3>
+          <span class="gear-price">$5 / day</span>
+          <button class="add-btn">Add to trip</button>
         </div>
+      </div>
 
-        <h3>Compare gear bundles</h3>
-        <table>
-            <tr>
-                <th>Budle</th>
-                <th>Includes</th>
-                <th>Price / day</th>
-            </tr>
-            <tr>
-                <td>Starter</td>
-                <td>Tent + sleeping bag</td>
-                <td>$20</td>
-            </tr>
-            <tr>
-                <td>Complete</td>
-                <td>Tent + pack + boots + poles</td>
-                <td>$32</td>
-            </tr>
-            <tr>
-                <td>Premium</td>
-                <td>Complete + cooking kit + GPS</td>
-                <td>$45</td>
-            </tr>
-        </table>
+    </div>
 
-        <div>
-            <h2>Why rent instead of buy?</h2>
-            <h5>Save mney</h5>
-            <p>on one-time trips</p>
-            <h5>No storage hassle</h5>
-            <p>at home</p>
-            <h5>Always maintained</h5>
-            <p>checked before every rental</p>
+    <!-- compare bundles table -->
+    <div class="bundles-section">
+      <h2>Compare gear bundles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Bundle</th>
+            <th>Includes</th>
+            <th>Price / day</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starter</td>
+            <td>Tent + sleeping bag</td>
+            <td>$20</td>
+          </tr>
+          <tr class="highlight">
+            <td><strong>Complete</strong></td>
+            <td>Tent + pack + boots + poles</td>
+            <td><strong>$32</strong></td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>Complete + cooking kit + GPS</td>
+            <td>$45</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- why rent section -->
+    <div class="why-rent">
+      <h2>Why rent instead of buy?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h4>Save money</h4>
+          <p>on one-time trips</p>
         </div>
+        <div class="why-item">
+          <h4>No storage hassle</h4>
+          <p>at home</p>
+        </div>
+        <div class="why-item">
+          <h4>Always maintained</h4>
+          <p>checked before every rental</p>
+        </div>
+      </div>
+    </div>
 
-        <footer>
-        &copy; 2026 BaseCamp Trial
-      
-     </footer>
-</body>
+    <!-- footer -->
+    <footer>
+      &copy; 2026 BaseCamp Trail
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="GearRental.html">Gear</a></li>
+        <li><a href="About-Contact.html">About</a></li>
+      </ul>
+    </footer>
+
+  </body>
 </html>

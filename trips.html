@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Trips</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/trips.css" />
+    <title>Trips</title>
+  </head>
+  <body>
 
-        <!-- navbar -->
-
+    <!-- navbar -->
     <nav class="header">
-      <h2>BaseCamp Trial</h2>
+      <h2>BaseCamp Trail</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
@@ -20,74 +20,131 @@
       <button>Book now</button>
     </nav>
 
+    <!-- page header -->
+    <div class="page-header">
+      <h1>All trips</h1>
+      <p>24 trips found</p>
+    </div>
 
-    <section>
-        <h1>All trips</h1>
-        <p>24 trips found</p>
-        <!-- filter -->
-        <div>
-            <h4>Difficulty</h4>
-            <input type="checkbox">Easy
-            <input type="checkbox" checked>Moderate
-            <input type="checkbox">Hard
-        
-        <hr>
-        <h4>Duration</h4>
-        <input type="checkbox">1-day
-        <input type="checkbox">2-3 days
-        <input type="checkbox">4+ days
-        <hr>
-        <h4>Max price: <span>$500</span></h4>
-        <input type="range">
-        <button>Apply filters</button>
-           </div>
+    <!-- main layout: sidebar + grid -->
+    <div class="layout">
 
-
-           <!-- trips -->
-        <div>
-            <label>Moderate</label>
-            <img src="" alt="trip photo">
-            <h4>Highland Ridge Trek</h4>
-            <p>3 days</p>
-            <h3>$240</h3>
-            <button>View trip</button>
+      <!-- filter sidebar -->
+      <aside class="filters">
+        <div class="filter-group">
+          <h4>Difficulty</h4>
+          <label><input type="checkbox" /> Easy</label>
+          <label><input type="checkbox" checked /> Moderate</label>
+          <label><input type="checkbox" /> Hard</label>
         </div>
-        <div>
-            <label>Easy</label>
-            <img src="" alt="trip photo">
-            <h4>Coastal Forest Loop</h4>
-            <p>1 days</p>
-            <h3>$90</h3>
-            <button>View trip</button>
-        </div>
-        <div>
-            <label>Hard</label>
-            <img src="" alt="trip photo">
-            <h4>Glacier Valley Expedition</h4>
-            <p>5 days</p>
-            <h3>$520</h3>
-            <button>View trip</button>
-        </div>
-        <div>
-            <label>Moderate</label>
-            <img src="" alt="trip photo">
-            <h4>River Canyon Hike</h4>
-            <p>2 days</p>
-            <h3>$180</h3>
-            <button>View trip</button>
-        </div>
-    </section>
-        
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>&rarr;</button>
 
-         <!-- footer -->
+        <div class="filter-group">
+          <h4>Duration</h4>
+          <label><input type="checkbox" /> 1 day</label>
+          <label><input type="checkbox" /> 2–3 days</label>
+          <label><input type="checkbox" /> 4+ days</label>
+        </div>
 
+        <div class="filter-group">
+          <h4>Max price: <span class="price-val">$500</span></h4>
+          <input type="range" min="0" max="600" value="500" />
+        </div>
+
+        <button class="apply-btn">Apply filters</button>
+      </aside>
+
+      <!-- trip cards grid -->
+      <main class="trip-grid">
+
+        <div class="trip-card">
+          <div class="card-img">
+            <span class="badge moderate">Moderate</span>
+            <img src="https://picsum.photos/seed/basecamp-trip1/600/400" alt="Highland Ridge Trek" />
+          </div>
+          <div class="card-body">
+            <div class="card-info">
+              <h3>Highland Ridge Trek</h3>
+              <p>3 days</p>
+            </div>
+            <div class="card-bottom">
+              <span class="price">$240</span>
+              <a href="tripsDetail.html" class="view-btn">View trip</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card">
+          <div class="card-img">
+            <span class="badge easy">Easy</span>
+            <img src="https://picsum.photos/seed/basecamp-trip2/600/400" alt="Coastal Forest Loop" />
+          </div>
+          <div class="card-body">
+            <div class="card-info">
+              <h3>Coastal Forest Loop</h3>
+              <p>1 day</p>
+            </div>
+            <div class="card-bottom">
+              <span class="price">$90</span>
+              <a href="tripsDetail.html" class="view-btn">View trip</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card">
+          <div class="card-img">
+            <span class="badge hard">Hard</span>
+            <img src="https://picsum.photos/seed/basecamp-trip3/600/400" alt="Glacier Valley Expedition" />
+          </div>
+          <div class="card-body">
+            <div class="card-info">
+              <h3>Glacier Valley Expedition</h3>
+              <p>5 days</p>
+            </div>
+            <div class="card-bottom">
+              <span class="price">$520</span>
+              <a href="tripsDetail.html" class="view-btn">View trip</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card">
+          <div class="card-img">
+            <span class="badge moderate">Moderate</span>
+            <img src="https://picsum.photos/seed/basecamp-trip4/600/400" alt="River Canyon Hike" />
+          </div>
+          <div class="card-body">
+            <div class="card-info">
+              <h3>River Canyon Hike</h3>
+              <p>2 days</p>
+            </div>
+            <div class="card-bottom">
+              <span class="price">$180</span>
+              <a href="tripsDetail.html" class="view-btn">View trip</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- pagination -->
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">&rarr;</a>
+    </div>
+
+    <!-- footer -->
     <footer>
-        &copy; 2026 BaseCamp Trial
-      
-     </footer>
-</body>
+      &copy; 2026 BaseCamp Trail
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="GearRental.html">Gear</a></li>
+        <li><a href="About-Contact.html">About</a></li>
+      </ul>
+    </footer>
+
+  </body>
 </html>

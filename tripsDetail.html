@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trips Detail</title>
-</head>
-<body>
-     <nav class="header">
-      <h2>BaseCamp Trial</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/tripsDetail.css" />
+    <title>Trip Detail</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="header">
+      <h2>BaseCamp Trail</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
@@ -16,84 +19,115 @@
       </ul>
       <button>Book now</button>
     </nav>
-    
 
-    <img src="" alt="banner">
-    <img src="" alt=""photo 2>
-    <img src="" alt="more">
+    <!-- gallery + booking box -->
+    <div class="detail-top">
+      <div class="gallery">
+        <div class="gallery-main">
+          <img src="https://picsum.photos/seed/basecamp-detailmain/700/500" alt="Main trip photo" />
+        </div>
+        <div class="gallery-side">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/basecamp-thumb1/350/250" alt="Trip photo 2" />
+          </div>
+          <div class="thumb thumb-overlay">
+            <img src="https://picsum.photos/seed/basecamp-thumb2/350/250" alt="Trip photo 3" />
+            <div class="overlay">+5 more</div>
+          </div>
+        </div>
+      </div>
 
-<form >
-      <h2>$240</h2>
-      <p>per person</p>
-      <hr>
-      <label >Date</label>
-      <input type="date">
-      <label>Tavellers</label>
-      <input type="number">
-      <button type="submit">Book trip</button>
+      <div class="booking-box">
+        <span class="booking-price">$240</span>
+        <span class="per-person">per person</span>
+        <hr />
+        <label for="date">Date</label>
+        <input type="date" id="date" />
+        <label for="travelers">Travelers</label>
+        <input type="number" id="travelers" value="2" min="1" />
+        <a href="BookingForm.html" class="book-btn">Book trip</a>
+      </div>
+    </div>
 
-</form>
+    <!-- title block -->
+    <div class="title-block">
+      <h1>Highland Ridge Trek</h1>
+      <p>3 days &middot; Moderate &middot; Northern range</p>
+    </div>
 
+    <!-- tabs -->
+    <div class="tabs-section">
+      <div class="tabs">
+        <span class="tab active">Itinerary</span>
+        <span class="tab">Gear needed</span>
+        <span class="tab">Reviews</span>
+      </div>
 
-<h1>Highland Ridge Trek</h1>
-<p>3 days *Moderate *Northern range</p>
+      <!-- itinerary table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Route</th>
+            <th>Distance</th>
+            <th>Elevation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Base camp to ridge trail</td>
+            <td>8 km</td>
+            <td>+400 m</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ridge trail to summit camp</td>
+            <td>11 km</td>
+            <td>+650 m</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Summit camp to base (descent)</td>
+            <td>14 km</td>
+            <td>&minus;1050 m</td>
+          </tr>
+        </tbody>
+      </table>
 
-<ul>
-    <li>Itinerary</li>
- <li>Gear needed</li>
- <li>Reviews</li>
-</ul>
+      <!-- included -->
+      <div class="included">
+        <h3>What's included</h3>
+        <ul>
+          <li>Professional guide and safety equipment</li>
+          <li>Camping gear and meals for all 3 days</li>
+          <li>Transport to and from base camp</li>
+        </ul>
+      </div>
 
-<hr>
+      <!-- reviews -->
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <div class="review-card">
+          <div class="review-top">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="reviewer">Sara K.</span>
+          </div>
+          <p>Incredible scenery, the guide was excellent throughout.</p>
+        </div>
+      </div>
+    </div>
 
-<table>
-
-
-<tr>
-    <th>Day</th>
-    <th>Route</th>
-    <th>Distance</th>
-    <th>Elevation</th>
-</tr>
-
-<tr>
-    <td>1</td>
-    <td>Base camp to ridge trial</td>
-    <td>8km</td>
-
-    <td>+400 m</td>
-</tr>
-<tr>
-    <td>2</td>
-    <td>Ridge trial to summit camp</td>
-    <td>11lm</td>
-    <td>+650 m</td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>Summit camp to base (descent)</td>
-    <td>14km</td>
-    <td>-1050 m</td>
-</tr>
-</table>
-
-<h3>What's included</h3>
-<ol>
-    <li>Professional guide and saftey equipment</li>
-    <li>Camping gear and meals for all 3 days</li>
-    <li>Transport to and from base camp</li>
-</ol>
-
-<h3>Reviews</h3>
-<div>
-    <h5>* * * * * SAra K.</h5>
-    <p>Incredibe scenry, the guide was excellent throughout</p>
-</div>
-
-
+    <!-- footer -->
     <footer>
-        &copy; 2026 BaseCamp Trial
-      
-     </footer>
-</body>
+      &copy; 2026 BaseCamp Trail
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="GearRental.html">Gear</a></li>
+        <li><a href="About-Contact.html">About</a></li>
+      </ul>
+    </footer>
+
+  </body>
 </html>

@@ -1,67 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking Form</title>
+    <link rel="stylesheet" href="styling/BookingForm.css" />
+    <title>Book a Trip</title>
   </head>
   <body>
-    <nav>
-      <h2>BaseCamp Tria</h2>
-      <button>Save and exit</button>
+
+    <!-- navbar -->
+    <nav class="header">
+      <h2>BaseCamp Trail</h2>
+      <a href="trips.html" class="save-exit">Save and exit</a>
     </nav>
-    <h2>Complete your booking</h2>
-    <p>1 Details</p>
-    <hr />
-    <p>2 Payment</p>
-    <hr />
-    <p>3 Confirm</p>
 
-    <form>
-      <h3>Personal details</h3>
-      <hr />
-      <label>Full name</label>
-      <input type="text" placeholder="e.g. Ayesha Khan" />
-      <label>Email</label>
-      <input type="email" placeholder="ayeha@" />
-      <input type="number" placeholder="+92 3xx xxxxxxx" />
-      <label>Trip date</label>
-      <input type="date" />
+    <div class="form-wrapper">
+      <h1>Complete your booking</h1>
 
-      <h4>Trip preferences</h4>
-      <hr />
+      <!-- stepper -->
+      <div class="stepper">
+        <div class="step active">
+          <div class="step-circle">1</div>
+          <span class="step-label">Details</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle">2</div>
+          <span class="step-label">Payment</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <span class="step-label">Confirm</span>
+        </div>
+      </div>
 
-      <label >Number of travellers</label>
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <form>
+        <!-- personal details -->
+        <fieldset>
+          <legend>Personal details</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" placeholder="e.g. Ayesha Khan" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="+92 3xx xxxxxxx" />
+            </div>
+            <div class="form-group">
+              <label for="tripdate">Trip date</label>
+              <input type="date" id="tripdate" />
+            </div>
+          </div>
+        </fieldset>
 
-      <label>Fitness Level</label>
-      <input type="radio">Beginner
-      <input type="radio" checked>Intermdiate
-      <input type="radio">Advanced
-      <br/>
-      <label>Adds-ons</label>
-      <input type="checkbox" checked> Gear Rental bundle
-      <input type="checkbox">Track insurace
-      <input type="checkbox">Airport pickup
-      <br/>
-      <label>special requests</label>
-      <textarea placeholder="Any delivery restrictions or accessibility needs..."  cols="50" rows="10"></textarea>
-      <br/>
-      <input type="checkbox">I agree to the terms and cancellation policy
-      <br/>
-      <button>Back</button>
-      <button>continue to payment</button>
-    </form>
+        <!-- trip preferences -->
+        <fieldset>
+          <legend>Trip preferences</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="travelers">Number of travelers</label>
+              <select id="travelers">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Fitness level</label>
+              <div class="radio-group">
+                <label class="radio-opt"><input type="radio" name="fitness" /> Beginner</label>
+                <label class="radio-opt"><input type="radio" name="fitness" checked /> Intermediate</label>
+                <label class="radio-opt"><input type="radio" name="fitness" /> Advanced</label>
+              </div>
+            </div>
+          </div>
 
-     <footer>
-        &copy; 2026 BaseCamp Trial
-      
-     </footer>
+          <div class="form-group">
+            <label>Add-ons</label>
+            <div class="checkbox-group">
+              <label class="check-opt"><input type="checkbox" checked /> Gear rental bundle</label>
+              <label class="check-opt"><input type="checkbox" /> Travel insurance</label>
+              <label class="check-opt"><input type="checkbox" /> Airport pickup</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special requests</label>
+            <textarea id="notes" placeholder="Any dietary restrictions or accessibility needs..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- consent -->
+        <label class="consent">
+          <input type="checkbox" />
+          I agree to the terms and cancellation policy
+        </label>
+
+        <!-- actions -->
+        <div class="form-actions">
+          <a href="tripsDetail.html" class="btn-back">Back</a>
+          <button type="submit" class="btn-continue">Continue to payment</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      &copy; 2026 BaseCamp Trail
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="GearRental.html">Gear</a></li>
+        <li><a href="About-Contact.html">About</a></li>
+      </ul>
+    </footer>
+
   </body>
 </html>
