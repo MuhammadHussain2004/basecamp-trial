@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/global.css" />
     <link rel="stylesheet" href="styling/index.css" />
     <title>Home Page</title>
   </head>
   <body>
     <!-- navbar -->
     <nav class="header">
-      <h2>BaseCamp Trail</h2>
+      <h2><a href="index.html" style="text-decoration:none;color:inherit;">BaseCamp Trail</a></h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
         <li><a href="GearRental.html">Gear</a></li>
         <li><a href="About-Contact.html">About</a></li>
       </ul>
-      <button>Book now</button>
+      <button onclick="window.location.href='BookingForm.html'">Book now</button>
     </nav>
 
     <!-- hero section -->
@@ -28,8 +29,8 @@
           from your first day hike to multi-day expeditions.
         </p>
         <div>
-          <button class="btn-primary">Explore trips</button>
-          <button class="btn-outline">View gear</button>
+          <button class="btn-primary" onclick="window.location.href='trips.html'">Explore trips</button>
+          <button class="btn-outline" onclick="window.location.href='GearRental.html'">View gear</button>
         </div>
       </div>
       <div class="hero-right">
@@ -44,7 +45,7 @@
     <section class="features">
       <h3>Featured trips</h3>
       <div class="cards">
-        <div class="features-card">
+        <div class="features-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <img
             src="https://picsum.photos/seed/basecamp-trip1/600/400"
             alt="Highland Ridge Trek"
@@ -59,7 +60,7 @@
           </div>
         </div>
 
-        <div class="features-card">
+        <div class="features-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <img
             src="https://picsum.photos/seed/basecamp-trip2/600/400"
             alt="Coastal Forest Loop"
@@ -74,7 +75,7 @@
           </div>
         </div>
 
-        <div class="features-card">
+        <div class="features-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <img
             src="https://picsum.photos/seed/basecamp-trip3/600/400"
             alt="Glacier Valley Expedition"
@@ -119,7 +120,7 @@
     </section>
 
     <!-- footer -->
-    <footer>
+    <footer class="site-footer">
       &copy; 2026 BaseCamp Trail
       <ul>
         <li><a href="index.html">Home</a></li>

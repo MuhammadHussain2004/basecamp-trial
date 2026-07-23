@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/global.css" />
     <link rel="stylesheet" href="styling/trips.css" />
     <title>Trips</title>
   </head>
@@ -10,14 +11,14 @@
 
     <!-- navbar -->
     <nav class="header">
-      <h2>BaseCamp Trail</h2>
+      <h2><a href="index.html" style="text-decoration:none;color:inherit;">BaseCamp Trail</a></h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
         <li><a href="GearRental.html">Gear</a></li>
         <li><a href="About-Contact.html">About</a></li>
       </ul>
-      <button>Book now</button>
+      <button onclick="window.location.href='BookingForm.html'">Book now</button>
     </nav>
 
     <!-- page header -->
@@ -56,7 +57,7 @@
       <!-- trip cards grid -->
       <main class="trip-grid">
 
-        <div class="trip-card">
+        <div class="trip-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <div class="card-img">
             <span class="badge moderate">Moderate</span>
             <img src="https://picsum.photos/seed/basecamp-trip1/600/400" alt="Highland Ridge Trek" />
@@ -73,7 +74,7 @@
           </div>
         </div>
 
-        <div class="trip-card">
+        <div class="trip-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <div class="card-img">
             <span class="badge easy">Easy</span>
             <img src="https://picsum.photos/seed/basecamp-trip2/600/400" alt="Coastal Forest Loop" />
@@ -90,7 +91,7 @@
           </div>
         </div>
 
-        <div class="trip-card">
+        <div class="trip-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <div class="card-img">
             <span class="badge hard">Hard</span>
             <img src="https://picsum.photos/seed/basecamp-trip3/600/400" alt="Glacier Valley Expedition" />
@@ -107,7 +108,7 @@
           </div>
         </div>
 
-        <div class="trip-card">
+        <div class="trip-card" onclick="window.location.href='tripsDetail.html'" style="cursor:pointer;">
           <div class="card-img">
             <span class="badge moderate">Moderate</span>
             <img src="https://picsum.photos/seed/basecamp-trip4/600/400" alt="River Canyon Hike" />
@@ -136,7 +137,7 @@
     </div>
 
     <!-- footer -->
-    <footer>
+    <footer class="site-footer">
       &copy; 2026 BaseCamp Trail
       <ul>
         <li><a href="index.html">Home</a></li>

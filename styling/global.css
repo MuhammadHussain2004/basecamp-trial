@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background-color: #faf8f4;
+  color: #232323;
+}
+
+/* ════════════════════════════════════
+   GLOBAL NAVBAR (Mobile 320px base)
+   ════════════════════════════════════ */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  background-color: #1e4d3a;
+  padding: 12px 16px;
+  color: white;
+}
+.header h2 {
+  font-size: 16px;
+  width: 100%;
+}
+.header ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+.header ul li a:hover {
+  color: #d9622b;
+}
+.header button {
+  background-color: #d9622b;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: Poppins;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.header button:hover {
+  background-color: #b94e1e;
+  transform: translateY(-1px);
+}
+.header button:active {
+  transform: translateY(0px);
+}
+
+/* Save Exit button (BookingForm) */
+.save-exit {
+  color: white;
+  text-decoration: none;
+  border: 1.5px solid white;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.save-exit:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ════════════════════════════════════
+   GLOBAL SITE FOOTER (Mobile 320px base)
+   ════════════════════════════════════ */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 16px;
+  background-color: #1e4d3a;
+  color: #d8e8e2;
+  font-size: 12px;
+}
+.site-footer ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 16px;
+}
+.site-footer ul li a {
+  color: #d8e8e2;
+  text-decoration: none;
+}
+.site-footer ul li a:hover {
+  color: white;
+}
+
+/* ════════════════════════════════════
+   MOBILE ZOOM — scale up from 320px base
+   ════════════════════════════════════ */
+@media (min-width: 375px) and (max-width: 1023px) {
+  html { zoom: 1.172; }
+}
+@media (min-width: 390px) and (max-width: 1023px) {
+  html { zoom: 1.219; }
+}
+@media (min-width: 414px) and (max-width: 1023px) {
+  html { zoom: 1.294; }
+}
+@media (min-width: 430px) and (max-width: 1023px) {
+  html { zoom: 1.344; }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  html { zoom: 1.5; }
+}
+@media (min-width: 540px) and (max-width: 1023px) {
+  html { zoom: 1.688; }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  html { zoom: 1.875; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  html { zoom: 2.4; }
+}
+
+/* ════════════════════════════════════
+   DESKTOP CSS (1024px base)
+   ════════════════════════════════════ */
+@media (min-width: 1024px) {
+  html { zoom: 1; }
+
+  /* global navbar */
+  .header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+    padding: 18px 50px;
+  }
+  .header h2 {
+    font-size: 20px;
+    width: auto;
+  }
+  .header ul {
+    gap: 30px;
+    flex: unset;
+    flex-wrap: nowrap;
+  }
+  .header ul li a {
+    font-size: 14px;
+  }
+  .header button {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  .save-exit {
+    padding: 9px 20px;
+    font-size: 14px;
+  }
+
+  /* global footer */
+  .site-footer {
+    padding: 40px 50px;
+    gap: 16px;
+    font-size: 13px;
+  }
+  .site-footer ul {
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+}
+
+/* ════════════════════════════════════
+   DESKTOP ZOOM — scale up from 1024px base
+   ════════════════════════════════════ */
+@media (min-width: 1280px) {
+  html { zoom: 1.25; }
+}
+@media (min-width: 1440px) {
+  html { zoom: 1.406; }
+}
+@media (min-width: 1536px) {
+  html { zoom: 1.5; }
+}
+@media (min-width: 1920px) {
+  html { zoom: 1.875; }
+}
+@media (min-width: 2560px) {
+  html { zoom: 2.5; }
+}

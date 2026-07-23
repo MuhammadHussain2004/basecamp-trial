@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/global.css" />
     <link rel="stylesheet" href="styling/GearRental.css" />
     <title>Gear Rental</title>
   </head>
@@ -10,14 +11,14 @@
 
     <!-- navbar -->
     <nav class="header">
-      <h2>BaseCamp Trail</h2>
+      <h2><a href="index.html" style="text-decoration:none;color:inherit;">BaseCamp Trail</a></h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trips.html">Trips</a></li>
         <li><a href="GearRental.html">Gear</a></li>
         <li><a href="About-Contact.html">About</a></li>
       </ul>
-      <button>Book now</button>
+      <button onclick="window.location.href='BookingForm.html'">Book now</button>
     </nav>
 
     <!-- page header -->
@@ -34,7 +35,7 @@
         <div class="gear-info">
           <h3>2-person tent</h3>
           <span class="gear-price">$15 / day</span>
-          <button class="add-btn">Add to trip</button>
+          <button class="add-btn" onclick="window.location.href='BookingForm.html'">Add to trip</button>
         </div>
       </div>
 
@@ -43,7 +44,7 @@
         <div class="gear-info">
           <h3>60L backpack</h3>
           <span class="gear-price">$8 / day</span>
-          <button class="add-btn">Add to trip</button>
+          <button class="add-btn" onclick="window.location.href='BookingForm.html'">Add to trip</button>
         </div>
       </div>
 
@@ -52,7 +53,7 @@
         <div class="gear-info">
           <h3>Hiking boots</h3>
           <span class="gear-price">$10 / day</span>
-          <button class="add-btn">Add to trip</button>
+          <button class="add-btn" onclick="window.location.href='BookingForm.html'">Add to trip</button>
         </div>
       </div>
 
@@ -61,7 +62,7 @@
         <div class="gear-info">
           <h3>Trekking poles</h3>
           <span class="gear-price">$5 / day</span>
-          <button class="add-btn">Add to trip</button>
+          <button class="add-btn" onclick="window.location.href='BookingForm.html'">Add to trip</button>
         </div>
       </div>
 
@@ -118,7 +119,7 @@
     </div>
 
     <!-- footer -->
-    <footer>
+    <footer class="site-footer">
       &copy; 2026 BaseCamp Trail
       <ul>
         <li><a href="index.html">Home</a></li>
